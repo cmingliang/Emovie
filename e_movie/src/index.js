@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './Header.js'
 import * as serviceWorker from './serviceWorker';
+import Container from './Container.js';
 
 ReactDOM.render(
-    <Header/>,
+    <React.Fragment>
+        <Header/>
+        <Container/>
+    </React.Fragment>,
     document.getElementById('root')
 );
 
