@@ -1,0 +1,48 @@
+import React,{ Component } from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import logo from './logo.svg';
+
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  button: {
+    color:'lightGreen',
+  },
+};
+
+class Header extends Component{
+  render(){
+    const { classes } =this.props;
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" >
+          <Toolbar>
+            <img src={logo} alt='logo' width='50px'/>
+            <Button  className={classes.button}>
+              正在售票
+            </Button>
+            <Button  className={classes.button}>
+              正在热映
+            </Button>
+            <Button  className={classes.button}>
+              即将上映
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
+}
+
+
+Header.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Header);
