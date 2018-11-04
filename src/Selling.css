@@ -1,0 +1,6 @@
+.movieList {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap;
+    justify-content: center;
+}

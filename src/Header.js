@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import logo from './logo.svg';
+import { Link } from 'react-router-dom'
 
 const styles = {
   root: {
@@ -15,7 +16,12 @@ const styles = {
   },
 };
 
+const SellLink = props => <Link to="/selling" {...props} />;
+const ShowLink = props => <Link to="/showing" {...props} />;
+const WillLink = props => <Link to="/willshow" {...props} />;
+
 class Header extends Component{
+  
   render(){
     const { classes } =this.props;
 
@@ -24,13 +30,13 @@ class Header extends Component{
         <AppBar position="static" >
           <Toolbar>
             <img src={logo} alt='logo' width='50px'/>
-            <Button  className={classes.button}>
+            <Button  className={classes.button} component={SellLink}>
               正在售票
             </Button>
-            <Button  className={classes.button}>
+            <Button  className={classes.button} component={ShowLink}>
               正在热映
             </Button>
-            <Button  className={classes.button}>
+            <Button  className={classes.button} component={WillLink}>
               即将上映
             </Button>
           </Toolbar>

@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header.js'
+import Routes from './Routes.js';
 import * as serviceWorker from './serviceWorker';
-import Container from './Container.js';
 
 ReactDOM.render(
-    <React.Fragment>
-        <Header/>
-        <Container/>
-    </React.Fragment>,
+    <Routes/>,
     document.getElementById('root')
 );
 

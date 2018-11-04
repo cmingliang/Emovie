@@ -22,5 +22,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy":"https://api-m.mtime.cn"
+  "proxy": "https://api-m.mtime.cn"
 }
